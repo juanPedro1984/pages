@@ -1,10 +1,11 @@
 <?php
-require_once('smarty/smarty-3.1.33/libs/Smarty.class.php');
+require_once('libs/Smarty.class.php');
 
 class indexView{
 
-function home(){
+function home($datos){
   $smarty = new Smarty();
+  $smarty->assign($datos,'datos');
   $smarty->display('templates/index.tpl');
 }
 
