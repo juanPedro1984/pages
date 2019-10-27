@@ -5,7 +5,7 @@ class indexView{
 
 function home($datos){
   $smarty = new Smarty();
-  $smarty->assign($datos,'datos');
+  $smarty->assign("datos", $datos);
   $smarty->display('templates/index.tpl');
 }
 

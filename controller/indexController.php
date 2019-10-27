@@ -21,7 +21,8 @@ function indexController()
 }
 
 function getDatos(){
-  return $this->indexModel->getDatos();
+  $datos = $this->indexModel->getDatos();
+  return $datos;
 }
 
 }

@@ -6,8 +6,8 @@ class indexModel{
 
   function __construct()  {
   $this->db = new PDO('mysql:host=localhost;'
-  .'dbname=id11358223_datos;charset=utf8'
-  , 'id11358223_juan', 'tasatasa');
+  .'dbname=db-jp-etchegoyen;charset=utf8'
+  , 'root', '');
 }
 
   function getDatos(){
