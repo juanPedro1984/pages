@@ -6,23 +6,12 @@
       </div>
         <div class="menu">
           <ul>
-            <li><a href="#">link1</a></li>
-            <li><a href="#">link2</a></li>
+            <li><a class="drop-item" href="#">Presentacion</a></li>
+            <li><a class="drop-item" href="#">Informacion personal</a></li>
+            <li><a class="drop-item" href="#">Estudios cursados</a></li>
+            <li><a class="drop-item" href="#">Proyectos</a></li>
           </ul>
         </div>
     </div>
-    <div class="dropdown">
-    <div class="headerButton">
-      <span class="p-btn">link1</span>
-    </div>
-    <div class="menu">
-      <ul>
-        <li><a href="#">link1</a></li>
-        <li><a href="#">link2</a></li>
-      </ul>
-    </div>
-
   </div>
-  </div>
-
 </header>

@@ -6,9 +6,10 @@
     <title></title>
   </head>
   <body>
-    {include file = "header.tpl"}
-
-
+    <div class="backG">
+      {include file = "header.tpl"}
+      {include file = "footer.tpl"}
+    </div>
   </body>
   <script src="./js/main.js" charset="utf-8"></script>
 </html>
