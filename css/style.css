@@ -1,130 +1,342 @@
+
+@font-face {
+    font-family: 'quicksandbold';
+    src: url('fonts/quicksand-bold-webfont.woff2') format('woff2'),
+         url('fonts/quicksand-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body{
   margin: 0;
 }
+/* TAMANO MOBILE */
 
-.img-social{
-  display:inline;
-  height: 50px;
-  width: 50px;
-}
-.drop-item{
-  text-align: center;
-}
-.backG{
-  display:flex;
-  flex-direction: column;
-  height: 1000px;
-  width: 100%;
-  background-image: url("../img/network.jpg");
-  background-size: cover;
-  border-radius: 3px;
-  justify-content: space-between;
-}
-.footer{
-  display:flex;
-  align-items: center;
-  background-color: #EDEDED ;
-  margin: 2px;
-  height: 50px;
-  box-shadow: 2px 2px 2px #A7A7A8;
-  border-radius: 3px;
-  justify-content: space-between;
-}
-.nombreFooter{
-  margin-left: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.header{
-  display:flex;
-  align-items: center;
-  background-color: #EDEDED ;
-  margin: 2px;
-  height: 50px;
-  box-shadow: 2px 2px 2px #A7A7A8;
-  border-radius: 3px;
-}
-
-.bG_img{
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-
-.headerButton{
-  display: flex;
+/* BOTON MENU APARECE A MENOS DE 800 PX  */
+.buttonMenu{
+  display : flex;
+  background-color: #DCDCDC;
   justify-content: center;
-  width: 150px;
+  align-items: center;
+  flex-direction: column;
+  margin:0;
   height: 35px;
-  background-color: #DCDCDC ;
-  margin: 5px 5px 0px 5px;
-  box-shadow: 1px 1px 1px #BCBCBC;
+  width: 35px;
   border: 1px solid #D7D7D7;
   border-radius: 3px;
 }
-
-.headerButton:hover{
+.buttonMenu:hover{
   background-color: #838383;
   border: 1px solid #A6A6A6;
-  box-shadow: 3px 3px 3px #A7A7A8;
 }
-.buttons{
-  display:inline-flex;
-  height: 50px;
+.buttonMenu:hover .lineaMenu{
+  background-color: #DCDCDC;
 }
-.headerButton:hover .p-btn{
-  color:#DCDCDC;
-}
-.p-btn{
+.btnM{
   display: block;
-  margin: 5px;
-  color: #727272;
-}
-.dropdown{
-  position:relative;
-  display: inline;
-}
-.menu ul{
-  margin-top: 5px;
-  margin: 0;
   padding: 0;
+  border-style:  none;
 }
-.menu ul li{
-  list-style: none;
-  padding: 3px;
-  margin-top: 5px;
+.btnCont{
+  /* DISPLAY "NONE" > 800 PX */
+  display: inline-flex;
+  position: fixed;
+  width:100%;
+  justify-content: flex-start;
 }
-.menu ul li:hover{
-  background-color: lightgrey;
+.lineaMenu{
+  height: 5px;
+  width: 20px;
+  background-color: #9D9D9D;
+  border-radius: 2px;
+  margin: 2px;
 }
-.menu ul li a{
+/* ------------ */
+
+/* NAVBAR */
+.header{
+  /* DISPLAY : NONE < 800 PX  */
+  display: flex;
+  position:fixed;
+  flex-direction: column;
+  top:0;
+  left:0;
+  z-index: 1;
+  align-items: center;
+  height: 100%;
+  width: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  background-color: black;
+  opacity: 80%;
+  transition: 0.5s;
+
+}
+.navText{
+  display:flex;
+  align-items: center;
+  padding: 2px;
+  color: lightgrey;
+  margin: 0;
+  font-family: 'quicksandbold';
+  font-size: 20px;
+}
+.navText a{
+  text-decoration: none;
+  color: white;
+}
+.navButton{
+  display : flex;
+  justify-content: center;
+  width: 100%;
+  height: 12px;
+  margin: 10px;
+  opacity: 100%;
+  background-color: inherit;
+}
+.navButton:hover .navText a{
+  color:grey;
+}
+.navButton:hover{
+  background-color: black;
+}
+/* -------------------- */
+
+/* IMAGEN DE INICIO + TITULO */
+.inicio{
   display: block;
+  height: 200px;
+  background-image: url("../img/writing.jpg");
+  background-size: 120%;
+  background-attachment: fixed;
+}
+.titulo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+/* -------------- */
+
+/* CARTA DE PRESENTACION */
+.presentacion{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100% ;
+  justify-content: center;
+  align-items: center;
+}
+.carta p{
+  text-align: center;
+  font-size: 15px;
+  font-family: 'quicksandbold';
+  margin: 5%;
+}
+.textTitulo{
+  font-family: 'quicksandbold';
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+/* ----------- */
+
+/* DATOS PERSONALES */
+.datos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  height: 600px;
+  background-color: #EDEDED;
+}
+.fotoCard{
+  display:inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid black;
+  width: 250px;
+  height:350px;
+}
+.imgFotoCard{
+  display: block;
+  height: 300px;
+  width: 250px;
+}
+.nombreCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 50px;
+  width: 250px;
+}
+.nombreCard h2{
+  display: inline;
+  font-family: 'quicksandbold';
+  font-size: 20px;
+  text-align: center;
+}
+/* ------------- */
+
+/* ESTUDIOS CURSADOS  */
+.estudio{
+  display: block;
+  height: 200px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/laptop.jpg");
+  background-size:180%;
+  background-attachment: fixed;
+}
+/* -------------- */
+
+/* TAMANO MONITOR DE PC - TABLET */
+
+
+@media screen and (min-width: 800px){
+
+.btnCont{
+  display:none;
+}
+.clbtn{
+  display:none;
+}
+.datos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  height: 600px;
+  background-color: #EDEDED;
+}
+.fotoCard{
+  display:inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid black;
+  width: 250px;
+  height:350px;
+}
+.imgFotoCard{
+  display: block;
+  height: 300px;
+  width: 250px;
+}
+.nombreCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 50px;
+  width: 250px;
+}
+.nombreCard h2{
+  display: inline;
+  font-family: 'quicksandbold';
+  font-size: 20px;
+  text-align: center;
+}
+.presentacion{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.carta{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+.carta p{
+  text-align: center;
+  font-size: 25px;
+  font-family: 'quicksandbold';
+  margin: 5% 0 5% 0;
+
+}
+.textTitulo{
+  margin-top: 20px;
+}
+.inicio{
+  display: block;
+  height: 400px;
+  background-image: url("../img/writing.jpg");
+  background-attachment: fixed;
+}
+.titulo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.textTitulo{
+  font-family: 'quicksandbold';
+  font-size: 60px;
+  margin: 30px;
+}
+.header{
+  display : flex;
+  flex-direction: row;
+  position: sticky;
+  top:0;
+  justify-content: center;
+  padding:0;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  transition: 0.5s;
+  background-color: inherit;
+  opacity: inherit;
+}
+.hideHeader{
+  display: none;
+}
+.navButton:hover .navText a{
+  color:grey;
+}
+.navButton:hover{
+  background-color: black;
+}
+.navButton{
+  display : flex;
+  justify-content: center;
+  width: 200px;
+  height: 100%;
+  margin: 0;
+  opacity: 100%;
+  background-color: inherit;
+}
+
+.navText{
+  display:flex;
+  align-items: center;
+  color: black;
+  margin: 0;
+  font-family: 'quicksandbold';
+  font-size: 25px;
+}
+
+.navText a{
   text-decoration: none;
   color: black;
-  font-family:Arial, Helvetica, sans-serif;
 }
-.dropdown:hover .menu{
-  display:flex;
+
+.estudio{
+  display: block;
+  height: 600px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/laptop.jpg");
+  background-attachment: fixed;
 }
-  @-webkit-keyframes dropmenu{
-   0%{opacity:0%;}
-   100%{opacity:100%;}
- }
-  @keyframes dropmenu {
-  0%{opacity:0%;}
-  100%{opacity:100%;}
-}
-.menu{
-  display:none;
-  height: 150px;
-  width: 150px;
-  margin: 0px 5px 0px 5px;
-  position: relative;
-  background-color: white;
-  box-shadow: 5px 5px 3px #A7A7A8;
-  -webkit-animation-name: dropmenu;
-  -webkit-animation-duration:1s;
-  -webkit-animation-iteration-count: 1;
-  animation-name: dropmenu;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
 }
