@@ -10,7 +10,14 @@ body{
   margin: 0;
 }
 /* TAMANO MOBILE */
-
+.navbar-collapse{
+  justify-content: center;
+}
+.nav-link{
+  font-family: 'quicksandbold';
+  font-size: 20px;
+  margin: 3px;
+}
 /* BOTON MENU APARECE A MENOS DE 800 PX  */
 .buttonMenu{
   display : flex;
@@ -54,20 +61,11 @@ body{
 
 /* NAVBAR */
 .header{
-  /* DISPLAY : NONE < 800 PX  */
-  display: flex;
+  display: inline;
   position:fixed;
-  flex-direction: column;
-  top:0;
-  left:0;
   z-index: 1;
-  align-items: center;
-  height: 100%;
-  width: 0;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  background-color: black;
-  opacity: 80%;
+  background-color:black;
+  width: 100%;
   transition: 0.5s;
 
 }
@@ -197,7 +195,10 @@ body{
 
 
 @media screen and (min-width: 800px){
-
+.nav-link{
+  font-size: 25px;
+  margin: 5px;
+}
 .btnCont{
   display:none;
 }
@@ -267,7 +268,7 @@ body{
 }
 .inicio{
   display: block;
-  height: 400px;
+  height: 600px;
   background-image: url("../img/writing.jpg");
   background-attachment: fixed;
 }
@@ -276,27 +277,15 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 600px;
 }
 .textTitulo{
   font-family: 'quicksandbold';
   font-size: 60px;
   margin: 30px;
 }
-.header{
-  display : flex;
-  flex-direction: row;
-  position: sticky;
-  top:0;
-  justify-content: center;
-  padding:0;
-  align-items: center;
-  height: 100px;
-  width: 100%;
-  transition: 0.5s;
-  background-color: inherit;
-  opacity: inherit;
-}
+
+
 .hideHeader{
   display: none;
 }
@@ -332,7 +321,7 @@ body{
 
 .estudio{
   display: block;
-  height: 600px;
+  height: 400px;
   width: 100%;
   align-items: center;
   justify-content: center;
